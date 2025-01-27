@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komis Samochodowy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto max-w-7xl">
+      <header class="flex justify-between items-center py-4 mb-6 border-b border-gray-700">
+        <h1 class="text-4xl font-semibold text-gray-100">Komis Samochodowy</h1>
+      </header>
+
+      <div class="flex space-x-6">
+        <div class="w-1/4">
+          <nav>
+          <ul class="space-y-4">
+            <li>
+              <a href="/" class="btn flex items-center space-x-4 bg-blue-700 text-white py-3 px-6 rounded-md w-full hover:bg-blue-600 transition-all shadow-lg">
+                <span class="material-icons">home</span>
+                <span class="btn-text text-lg">Lista Samochodów</span>
+              </a>
+            </li>
+            <li>
+              <a href="/categories" class="btn flex items-center space-x-4 bg-yellow-700 text-white py-3 px-6 rounded-md w-full hover:bg-yellow-600 transition-all shadow-lg">
+                <span class="material-icons">list</span>
+                <span class="btn-text text-lg">Lista Kategorii</span>
+              </a>
+            </li>
+            <li>
+              <a href="/cars/new" class="btn flex items-center space-x-4 bg-green-700 text-white py-3 px-6 rounded-md w-full hover:bg-green-600 transition-all shadow-lg">
+                <span class="material-icons">car_repair</span>
+                <span class="btn-text text-lg">Dodaj Samochód</span>
+              </a>
+            </li>
+            <li>
+              <a href="/categories/new" class="btn flex items-center space-x-4 bg-purple-700 text-white py-3 px-6 rounded-md w-full hover:bg-purple-600 transition-all shadow-lg">
+                <span class="material-icons">category</span>
+                <span class="btn-text text-lg">Dodaj Kategorię</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+
+        <div class="container mx-auto mt-8">
+          <div class="flex justify-between items-center mb-4">
+            <h1 class="text-3xl font-bold">Dodaj Nową Kategorię</h1>
+            <%= link_to "Powrót", categories_path, class: "bg-gray-600 text-white py-2 px-6 rounded-md hover:bg-gray-500 transition-all" %>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-md shadow-lg w-full">
+            <%= form_with(model: @category, local: true) do |form| %>
+              <div class="mb-4">
+                <%= form.label :name, class: "text-sm text-gray-400" %>
+                <%= form.text_field :name, class: "w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md" %>
+              </div>
+
+              <div class="flex justify-end mb-4">
+                <%= form.submit "Dodaj Kategorię", class: "bg-purple-600 text-white py-2 px-6 rounded-md hover:bg-purple-500" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

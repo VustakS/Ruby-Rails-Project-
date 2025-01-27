@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komis Samochodowy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto max-w-7xl">
+      <header class="flex justify-between items-center py-4 mb-6 border-b border-gray-700">
+        <h1 class="text-4xl font-semibold text-gray-100">Komis Samochodowy</h1>
+      </header>
+
+      <div class="flex space-x-6">
+        <div class="w-1/4">
+        <nav>
+          <ul class="space-y-4">
+            <li>
+              <a href="/" class="btn flex items-center space-x-4 bg-blue-700 text-white py-3 px-6 rounded-md w-full hover:bg-blue-600 transition-all shadow-lg">
+                <span class="material-icons">home</span>
+                <span class="btn-text text-lg">Lista Samochodów</span>
+              </a>
+            </li>
+            <li>
+              <a href="/categories" class="btn flex items-center space-x-4 bg-yellow-700 text-white py-3 px-6 rounded-md w-full hover:bg-yellow-600 transition-all shadow-lg">
+                <span class="material-icons">list</span>
+                <span class="btn-text text-lg">Lista Kategorii</span>
+              </a>
+            </li>
+            <li>
+              <a href="/cars/new" class="btn flex items-center space-x-4 bg-green-700 text-white py-3 px-6 rounded-md w-full hover:bg-green-600 transition-all shadow-lg">
+                <span class="material-icons">car_repair</span>
+                <span class="btn-text text-lg">Dodaj Samochód</span>
+              </a>
+            </li>
+            <li>
+              <a href="/categories/new" class="btn flex items-center space-x-4 bg-purple-700 text-white py-3 px-6 rounded-md w-full hover:bg-purple-600 transition-all shadow-lg">
+                <span class="material-icons">category</span>
+                <span class="btn-text text-lg">Dodaj Kategorię</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Основний контент -->
+      <div class="w-full">
+        <h1 class="text-3xl font-bold mb-4">Lista Kategorii</h1>
+
+        <table class="table-auto w-full mt-4 border border-gray-600 rounded-lg overflow-hidden shadow-lg">
+          <thead>
+            <tr class="bg-gray-800 text-white">
+              <th class="py-3 px-6 text-center border-b border-gray-700">Nazwa</th>
+              <th class="py-3 px-6 text-center border-b border-gray-700">Akcje</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @categories.each do |category| %>
+              <tr class="bg-gray-700 hover:bg-gray-600 transition-all">
+                <td class="py-3 px-6 text-center border-b border-gray-600"><%= category.name %></td>
+                <td class="py-3 px-6 text-center border-b border-gray-600">
+                  <%= link_to 'Usuń', '#', class: "bg-red-600 text-white py-1 px-3 rounded hover:bg-red-500 ml-2 shadow-md delete-link", data: { category_id: category.id } %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.delete-link').forEach(function(deleteLink) {
+        deleteLink.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const categoryId = e.target.dataset.categoryId;
+
+          fetch(`/categories/${categoryId}`, {
+            method: 'DELETE',
+            headers: {
+              'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+              'Accept': 'application/json',
+            },
+          }).then(response => {
+            if (response.ok) {
+              window.location.reload();
+            } else {
+              window.location.reload();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

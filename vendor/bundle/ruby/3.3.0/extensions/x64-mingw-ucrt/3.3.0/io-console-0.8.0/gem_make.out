@@ -1,0 +1,32 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for rb_syserr_fail_str(0, Qnil)... yes
+checking for rb_interned_str_cstr()... yes
+checking for rb_io_path()... yes
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... yes
+checking for rb_io_open_descriptor()... yes
+checking for rb_ractor_local_storage_value_newkey()... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+checking for ttyname_r()... no
+checking for ttyname()... no
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-wd69jc sitelibdir\=./.gem.20250126-20328-wd69jc clean
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-wd69jc sitelibdir\=./.gem.20250126-20328-wd69jc
+generating console-x64-mingw-ucrt.def
+compiling console.c
+linking shared-object io/console.so
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-wd69jc sitelibdir\=./.gem.20250126-20328-wd69jc install
+make: Увага: час зміни файла «console.so» перебуває на 1,2 с у майбутньому
+/usr/bin/install -c -m 0755 console.so ./.gem.20250126-20328-wd69jc/io
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-wd69jc sitelibdir\=./.gem.20250126-20328-wd69jc clean

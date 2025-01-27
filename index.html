@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komis Samochodowy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-6 max-w-7xl">
+      <header class="flex justify-between items-center py-4 mb-6 border-b border-gray-700">
+        <h1 class="text-4xl font-semibold text-gray-100">Komis Samochodowy</h1>
+        <img src="logo.jpg" alt="Logo" class="object-contain h-10" />
+      </header>
+
+      <div class="flex space-x-6">
+        <div class="w-1/4">
+          <nav>
+            <ul class="space-y-4">
+              <li><a href="#" class="btn flex items-center space-x-4 bg-blue-600 text-white py-3 px-6 rounded-md w-full hover:bg-blue-500 transition-all shadow-lg"><span class="material-icons">home</span><span class="btn-text text-lg">Strona Główna</span></a></li>
+              <li><a href="#" class="btn flex items-center space-x-4 bg-green-600 text-white py-3 px-6 rounded-md w-full hover:bg-green-500 transition-all shadow-lg"><span class="material-icons">car_repair</span><span class="btn-text text-lg">Oferty</span></a></li>
+              <li><a href="#" class="btn flex items-center space-x-4 bg-purple-600 text-white py-3 px-6 rounded-md w-full hover:bg-purple-500 transition-all shadow-lg"><span class="material-icons">phone_in_talk</span><span class="btn-text text-lg">Kontakt</span></a></li>
+              <li><a href="#" class="btn flex items-center space-x-4 bg-yellow-600 text-white py-3 px-6 rounded-md w-full hover:bg-yellow-500 transition-all shadow-lg"><span class="material-icons">add_circle</span><span class="btn-text text-lg">Dodaj Samochód</span></a></li>
+              <li><a href="#" class="btn flex items-center space-x-4 bg-gray-800 text-white py-3 px-6 rounded-md w-full hover:bg-gray-700 transition-all shadow-lg"><span class="material-icons">account_circle</span><span class="btn-text text-lg">Profil</span></a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="w-3/4 space-y-6">
+          <div class="bg-gray-800 p-6 rounded-md shadow-lg">
+            <h2 class="text-xl font-semibold text-gray-200 mb-4">Dodaj Nowy Samochód</h2>
+            <%= form_with model: @car, local: true do |form| %>
+              <div class="mb-4">
+                <%= form.label :brand, "Marka", class: "text-sm text-gray-400" %>
+                <%= form.text_field :brand, class: "w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md" %>
+              </div>
+              <div class="mb-4">
+                <%= form.label :model, "Model", class: "text-sm text-gray-400" %>
+                <%= form.text_field :model, class: "w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md" %>
+              </div>
+              <div class="mb-4">
+                <%= form.label :year, "Rok", class: "text-sm text-gray-400" %>
+                <%= form.number_field :year, class: "w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md" %>
+              </div>
+              <div class="mb-4">
+                <%= form.label :price, "Cena", class: "text-sm text-gray-400" %>
+                <%= form.number_field :price, step: 0.01, class: "w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md" %>
+              </div>
+              <div class="mb-4">
+                <%= form.submit "Dodaj Samochód", class: "w-full bg-blue-600 py-3 px-6 rounded-md text-white hover:bg-blue-500" %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-md shadow-lg">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Lista Samochodów</h2>
+            <table class="min-w-full bg-gray-800 text-white border border-gray-600">
+              <thead>
+                <tr>
+                  <th class="px-4 py-2">Marka</th>
+                  <th class="px-4 py-2">Model</th>
+                  <th class="px-4 py-2">Rok</th>
+                  <th class="px-4 py-2">Cena</th>
+                  <th class="px-4 py-2">Akcje</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @cars.each do |car| %>
+                  <tr class="border-b border-gray-600">
+                    <td class="px-4 py-2"><%= car.brand %></td>
+                    <td class="px-4 py-2"><%= car.model %></td>
+                    <td class="px-4 py-2"><%= car.year %></td>
+                    <td class="px-4 py-2"><%= number_to_currency(car.price) %></td>
+                    <td class="px-4 py-2">
+                      <%= link_to 'Edytuj', edit_car_path(car), class: "text-blue-600 hover:text-blue-800" %>
+                      <%= link_to 'Usuń', car_path(car), method: :delete, data: { confirm: "Czy na pewno chcesz usunąć?" }, class: "text-red-600 hover:text-red-800 ml-4" %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-gray-800 text-white py-4 mt-12">
+        <div class="text-center">
+          <p>&copy; 2025 Komis Samochodowy. Wszystkie prawa zastrzeżone.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

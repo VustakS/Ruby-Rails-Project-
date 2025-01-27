@@ -1,0 +1,23 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-yc75ls sitelibdir\=./.gem.20250126-20328-yc75ls clean
+make: Увага: час зміни файла «Makefile» перебуває на 0,73 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-yc75ls sitelibdir\=./.gem.20250126-20328-yc75ls
+generating stringio-x64-mingw-ucrt.def
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-yc75ls sitelibdir\=./.gem.20250126-20328-yc75ls install
+make: Увага: час зміни файла «stringio.so» перебуває на 0,83 с у майбутньому
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250126-20328-yc75ls
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-yc75ls sitelibdir\=./.gem.20250126-20328-yc75ls clean

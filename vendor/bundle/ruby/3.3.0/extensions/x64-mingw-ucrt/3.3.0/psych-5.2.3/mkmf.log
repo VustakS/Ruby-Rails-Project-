@@ -1,0 +1,113 @@
+pkg_config: checking for pkg-config for yaml-0.1... -------------------- ["-Ic:/Ruby33-x64/msys64/ucrt64/bin/../include ", "-Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib", "-lyaml"]
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" x86_64-w64-mingw32-pkg-config --exists yaml-0.1
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" x86_64-w64-mingw32-pkg-config --libs yaml-0.1 |
+=> "-Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib -lyaml\n"
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed     -lx64-ucrt-ruby330  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed     -lx64-ucrt-ruby330 -Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib -lyaml -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" x86_64-w64-mingw32-pkg-config --cflags-only-I yaml-0.1 |
+=> "-Ic:/Ruby33-x64/msys64/ucrt64/bin/../include\n"
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" x86_64-w64-mingw32-pkg-config --cflags-only-other yaml-0.1 |
+=> "\n"
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" x86_64-w64-mingw32-pkg-config --libs-only-l yaml-0.1 |
+=> "-lyaml\n"
+package configuration for yaml-0.1
+incflags: -Ic:/Ruby33-x64/msys64/ucrt64/bin/../include
+cflags: 
+ldflags: -Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib
+libs: -lyaml
+
+--------------------
+
+find_header: checking for yaml.h... -------------------- yes
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I. -Ic:/Ruby33-x64/msys64/ucrt64/bin/../include  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -O3 -fno-fast-math -fstack-protector-strong    -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <yaml.h>
+/* end */
+
+--------------------
+
+find_library: checking for yaml_get_version() in -lyaml... -------------------- yes
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I. -Ic:/Ruby33-x64/msys64/ucrt64/bin/../include  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -O3 -fno-fast-math -fstack-protector-strong  conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed -Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib     -lyaml -lx64-ucrt-ruby330 -lyaml  -lyaml -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+conftest.c: In function 't':
+conftest.c:17:57: error: 'yaml_get_version' undeclared (first use in this function)
+   17 | int t(void) { void ((*volatile p)()); p = (void ((*)()))yaml_get_version; return !p; }
+      |                                                         ^~~~~~~~~~~~~~~~
+conftest.c:17:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { void ((*volatile p)()); p = (void ((*)()))yaml_get_version; return !p; }
+/* end */
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I. -Ic:/Ruby33-x64/msys64/ucrt64/bin/../include  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -DYAML_DECLARE_STATIC -O3 -fno-fast-math -fstack-protector-strong  conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed -Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib     -lyaml -lx64-ucrt-ruby330 -lyaml  -lyaml -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: extern void yaml_get_version();
+18: int t(void) { yaml_get_version(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,26 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-e4gbsv sitelibdir\=./.gem.20250126-20328-e4gbsv clean
+make: Увага: час зміни файла «Makefile» перебуває на 0,6 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-e4gbsv sitelibdir\=./.gem.20250126-20328-e4gbsv
+make: Увага: час зміни файла «Makefile» перебуває на 0,2 с у майбутньому
+generating debug-x64-mingw-ucrt.def
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-e4gbsv sitelibdir\=./.gem.20250126-20328-e4gbsv install
+make: Увага: час зміни файла «debug.so» перебуває на 1 с у майбутньому
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250126-20328-e4gbsv/debug
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-e4gbsv sitelibdir\=./.gem.20250126-20328-e4gbsv clean

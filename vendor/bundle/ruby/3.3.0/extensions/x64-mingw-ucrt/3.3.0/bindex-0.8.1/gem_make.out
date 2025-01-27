@@ -1,0 +1,23 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-nfnhy7 sitelibdir\=./.gem.20250126-20328-nfnhy7 clean
+make: Увага: час зміни файла «Makefile» перебуває на 1,4 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-nfnhy7 sitelibdir\=./.gem.20250126-20328-nfnhy7
+make: Увага: час зміни файла «Makefile» перебуває на 0,61 с у майбутньому
+generating cruby-x64-mingw-ucrt.def
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-nfnhy7 sitelibdir\=./.gem.20250126-20328-nfnhy7 install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20250126-20328-nfnhy7/skiptrace/internal
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-nfnhy7 sitelibdir\=./.gem.20250126-20328-nfnhy7 clean

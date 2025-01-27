@@ -1,0 +1,34 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/psych-5.2.3/ext/psych
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for pkg-config for yaml-0.1... ["-Ic:/Ruby33-x64/msys64/ucrt64/bin/../include ", "-Lc:/Ruby33-x64/msys64/ucrt64/bin/../lib", "-lyaml"]
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/psych-5.2.3/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-sbz8l6 sitelibdir\=./.gem.20250126-20328-sbz8l6 clean
+cd libyaml && make clean
+/bin/sh: рядок 1: cd: libyaml: No such file or directory
+make: [Makefile:287: clean-so] Помилка 1 (ігнорується)
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/psych-5.2.3/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-sbz8l6 sitelibdir\=./.gem.20250126-20328-sbz8l6
+generating psych-x64-mingw-ucrt.def
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.so
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/psych-5.2.3/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-sbz8l6 sitelibdir\=./.gem.20250126-20328-sbz8l6 install
+make: Увага: час зміни файла «psych.so» перебуває на 0,91 с у майбутньому
+/usr/bin/install -c -m 0755 psych.so ./.gem.20250126-20328-sbz8l6
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/psych-5.2.3/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-sbz8l6 sitelibdir\=./.gem.20250126-20328-sbz8l6 clean
+cd libyaml && make clean
+/bin/sh: рядок 1: cd: libyaml: No such file or directory
+make: [Makefile:287: clean-so] Помилка 1 (ігнорується)

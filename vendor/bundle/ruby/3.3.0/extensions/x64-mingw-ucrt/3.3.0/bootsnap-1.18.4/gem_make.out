@@ -1,0 +1,28 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for fdatasync() in unistd.h... no
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-x4tptx sitelibdir\=./.gem.20250126-20328-x4tptx clean
+make: Увага: час зміни файла «Makefile» перебуває на 1,1 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-x4tptx sitelibdir\=./.gem.20250126-20328-x4tptx
+make: Увага: час зміни файла «Makefile» перебуває на 0,55 с у майбутньому
+generating bootsnap-x64-mingw-ucrt.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-x4tptx sitelibdir\=./.gem.20250126-20328-x4tptx install
+make: Увага: час зміни файла «bootsnap.so» перебуває на 1,2 с у майбутньому
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250126-20328-x4tptx/bootsnap
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-x4tptx sitelibdir\=./.gem.20250126-20328-x4tptx clean

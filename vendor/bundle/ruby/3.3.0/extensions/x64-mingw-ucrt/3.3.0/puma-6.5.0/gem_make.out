@@ -1,0 +1,33 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/puma-6.5.0/ext/puma_http11
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for whether -fstack-protector-strong -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
+checking for whether -fstack-protector-strong -l:libssp.a is accepted as LDFLAGS... yes
+checking for -lssp... yes
+checking for pkg-config for openssl... not found
+checking for BIO_read() in -llibcrypto... no
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+** Puma will be compiled without SSL support
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/puma-6.5.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-jtv42 sitelibdir\=./.gem.20250126-20328-jtv42 clean
+make: Увага: час зміни файла «Makefile» перебуває на 0,74 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/puma-6.5.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-jtv42 sitelibdir\=./.gem.20250126-20328-jtv42
+make: Увага: час зміни файла «Makefile» перебуває на 0,18 с у майбутньому
+generating puma_http11-x64-mingw-ucrt.def
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/puma-6.5.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-jtv42 sitelibdir\=./.gem.20250126-20328-jtv42 install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20250126-20328-jtv42/puma
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/puma-6.5.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-jtv42 sitelibdir\=./.gem.20250126-20328-jtv42 clean

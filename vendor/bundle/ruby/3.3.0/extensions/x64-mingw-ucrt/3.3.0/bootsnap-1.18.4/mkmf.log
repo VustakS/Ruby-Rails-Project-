@@ -1,0 +1,105 @@
+have_func: checking for fdatasync() in unistd.h... -------------------- no
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed     -lx64-ucrt-ruby330  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed     -lx64-ucrt-ruby330  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+conftest.c: In function 't':
+conftest.c:18:57: error: 'fdatasync' undeclared (first use in this function)
+   18 | int t(void) { void ((*volatile p)()); p = (void ((*)()))fdatasync; return !p; }
+      |                                                         ^~~~~~~~~
+conftest.c:18:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <unistd.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: int t(void) { void ((*volatile p)()); p = (void ((*)()))fdatasync; return !p; }
+/* end */
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -o conftest.exe -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -Lc:/Ruby33-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed     -lx64-ucrt-ruby330  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+C:/Ruby33-x64/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Users\VustakS\AppData\Local\Temp\ccoffms1.o:conftest.c:(.text+0x5): undefined reference to `fdatasync'
+collect2.exe: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <unistd.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: extern void fdatasync();
+19: int t(void) { fdatasync(); return 0; }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -O3 is accepted as CFLAGS... -------------------- yes
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong  -O3 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+append_cflags: checking for whether -std=c99 is accepted as CFLAGS... -------------------- yes
+
+PATH=".;c:/Ruby33-x64/lib;c:\Ruby33-x64\bin;c:\Ruby33-x64\msys64\ucrt64\bin;c:\Ruby33-x64\msys64\usr\bin;c:\Users\VustakS\bin;.;C:\RailsInstaller\Git\local\bin;C:\RailsInstaller\Git\mingw\bin;C:\RailsInstaller\Git\bin;c:\Ruby33-x64\bin;c:\Program Files\Common Files\Oracle\Java\javapath;c:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\WINDOWS\System32\OpenSSH\;c:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\Program Files\dotnet\;c:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;c:\Program Files\nodejs\;c:\Program Files\Common Files\Autodesk Shared\;c:\Program Files (x86)\Yarn\bin\;c:\Program Files\Git\cmd;C:\RailsInstaller\Git\cmd;c:\RailsInstaller\Ruby2.3.3\bin;c:\Users\VustakS\AppData\Local\Programs\Python\Launcher\;c:\Users\VustakS\AppData\Local\Microsoft\WindowsApps;c:\Users\VustakS\.dotnet\tools;c:\Users\VustakS\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\VustakS\AppData\Roaming\npm;c:\Users\VustakS\AppData\Local\Yarn\bin" "gcc -Ic:/Ruby33-x64/include/ruby-3.3.0/x64-mingw-ucrt -Ic:/Ruby33-x64/include/ruby-3.3.0/ruby/backward -Ic:/Ruby33-x64/include/ruby-3.3.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -O3  -std=c99 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+

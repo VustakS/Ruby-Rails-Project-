@@ -1,0 +1,18 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-potfvd sitelibdir\=./.gem.20250126-20328-potfvd clean
+make: *** Нема правила для створення цілі "clean".  Зупинка.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-potfvd sitelibdir\=./.gem.20250126-20328-potfvd
+make: Ціль "all" не вимагає виконання команд.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-potfvd sitelibdir\=./.gem.20250126-20328-potfvd install
+make: Ціль "install" не вимагає виконання команд.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-potfvd sitelibdir\=./.gem.20250126-20328-potfvd clean
+make: *** Нема правила для створення цілі "clean".  Зупинка.

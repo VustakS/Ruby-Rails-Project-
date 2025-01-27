@@ -1,0 +1,23 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-1qyaif sitelibdir\=./.gem.20250126-20328-1qyaif clean
+make: Увага: час зміни файла «Makefile» перебуває на 0,73 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-1qyaif sitelibdir\=./.gem.20250126-20328-1qyaif
+generating cparse-x64-mingw-ucrt.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-1qyaif sitelibdir\=./.gem.20250126-20328-1qyaif install
+make: Увага: час зміни файла «cparse.so» перебуває на 1 с у майбутньому
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250126-20328-1qyaif/racc
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-1qyaif sitelibdir\=./.gem.20250126-20328-1qyaif clean

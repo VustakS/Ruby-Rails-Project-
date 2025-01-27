@@ -1,0 +1,27 @@
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+c:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... no
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-xsq4d7 sitelibdir\=./.gem.20250126-20328-xsq4d7 clean
+make: Увага: час зміни файла «Makefile» перебуває на 0,27 с у майбутньому
+make: попередження: виявлено відхилення показів годинника. Збирання може бути неповним.
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-xsq4d7 sitelibdir\=./.gem.20250126-20328-xsq4d7
+generating date_core-x64-mingw-ucrt.def
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-xsq4d7 sitelibdir\=./.gem.20250126-20328-xsq4d7 install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20250126-20328-xsq4d7
+
+current directory: d:/railsp/lista/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250126-20328-xsq4d7 sitelibdir\=./.gem.20250126-20328-xsq4d7 clean
